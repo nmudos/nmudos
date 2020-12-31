@@ -32,4 +32,7 @@
 *.app
 
 .DS_Store
-buildd
+
+nmudos.kdev4
+.kdev4/
+build/
