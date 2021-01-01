@@ -1,8 +1,8 @@
 # v2019 is targeted to ubuntu 18.04 LTS, it ships with cmake 3.10
 cmake_minimum_required(VERSION 3.10)
 
-project(fluffos
-        DESCRIPTION "FluffOS LPC Driver"
+project(nMudOS
+        DESCRIPTION "nMudOS LPC Driver"
         LANGUAGES C CXX)
 
 set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake" ${CMAKE_MODULE_PATH})
@@ -40,7 +40,7 @@ if(GIT_EXECUTABLE)
   message("Git commit hash: ${PROJECT_VERSION}")
 endif()
 
-message("FluffOS ${PROJECT_VERSION} (${CMAKE_BUILD_TYPE})")
+message("nMudOS ${PROJECT_VERSION} (${CMAKE_BUILD_TYPE})")
 foreach(lang C CXX)
 message("  ${lang}: '${CMAKE_${lang}_COMPILER}' (${CMAKE_${lang}_COMPILER_ID} ${CMAKE_${lang}_COMPILER_VERSION})")
 endforeach()

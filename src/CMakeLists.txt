@@ -349,6 +349,9 @@ set(SRC
   "vm/internal/simulate.cc"
   "vm/internal/trace.cc"
   "vm/internal/vm.cc"
+  "nmudos/entry.cpp"
+  "nmudos/command/command.cpp"
+  "nmudos/command/version.cpp"
   )
 
 set(TEST_SRC
