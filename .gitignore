@@ -36,3 +36,5 @@
 nmudos.kdev4
 .kdev4/
 build/
+api/latex/
+api/html/
