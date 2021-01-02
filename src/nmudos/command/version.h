@@ -31,8 +31,12 @@ namespace nmudos
  */
 class version : public ICommand
 {
+private:
+    bool versionFlag = false;
+    
 public:
     virtual void defCommand(CLI::App &app);
+    virtual bool runCommand();
 };
 
 }

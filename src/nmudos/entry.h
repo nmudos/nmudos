@@ -51,6 +51,8 @@ private:
     entry(const entry&);
 	entry& operator=(const entry&);
     
+    void init_local();
+    void init_tz();
 
 public:
     

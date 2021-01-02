@@ -22,8 +22,21 @@ using namespace nmudos;
 
 void version::defCommand ( CLI::App& app )
 {
-    auto version = app.add_subcommand("version", "Print the version number of nMudOS");
-    version->callback([&]() {
+    /*
+    app.add_option("-v,--version", [](std::vector<std::string> val){
         std::cout << NMUDOS_VERSION << std::endl;
-    });
+        exit(0);
+        return true;
+    },"Print the version number of nMudOS");
+    */
+    app.add_flag("-v,--version", versionFlag, "Print the version number of nMudOS and exit");
+}
+
+bool version::runCommand()
+{
+    if(this->versionFlag)
+    {
+        std::cout << "nMudOS version " << NMUDOS_VERSION << std::endl << LICENSE << std::endl;
+    }
+    return versionFlag;
 }

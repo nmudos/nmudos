@@ -38,6 +38,11 @@ command::command(const command&)
 
 void command::init(CLI::App &app)
 {
-    nmudos::version* v = new nmudos::version();
-    v->defCommand(app);
+    this->v = new nmudos::version();
+    this->v->defCommand(app);
+}
+
+void command::run()
+{
+    if(this->v->runCommand()){exit(0);}
 }

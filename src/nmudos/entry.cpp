@@ -46,5 +46,9 @@ entry& operator=(const entry&)
 int entry::run(int argc, char **argv)
 {
     CLI11_PARSE(this->app, argc, argv);
+    numdos::command::getInstance().run();
+    this->app.callback([&]() {
+        std::cout << "rukou" << std::endl;
+    });
     return 0;
 }

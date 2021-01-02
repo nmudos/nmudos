@@ -31,6 +31,7 @@ class ICommand
 {
 public:
     virtual void defCommand(CLI::App &app) = 0;
+    virtual bool runCommand() = 0;
 };
 
 }

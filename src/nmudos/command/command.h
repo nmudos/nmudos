@@ -20,6 +20,7 @@
 #define NUMDOS_COMMAND_H
 
 #include "../../thirdparty/CLI/CLI.hpp"
+#include "version.h"
 
 namespace numdos
 {
@@ -29,6 +30,8 @@ namespace numdos
  */
 class command
 {
+private:
+    nmudos::version* v;
     
 private:
     command();
@@ -47,6 +50,7 @@ public:
 	}
 	
 	void init(CLI::App &app);
+    void run();
 
 };
 
